@@ -11,14 +11,14 @@ https://www.meta.ai/share/a/5386a2be-ee08-4c9d-8370-98e8d66e7858?utm_source=meta
 - cumbia-sonidera
 
 ## Licencia
-Este repositorio se comunica como código abierto bajo Licencia Apache Foundation 2.0 y 1.1. Al contribuir, solicitamos incluir el nombre y la versión del desarrollador (por ejemplo: "Alfredo Martínez Pastén v1.0"). Para más detalles sobre contribuciones y reglas de validación consulta CONTRIBUTIONS.md.
+Este repositorio se publica como código abierto bajo Licencia Apache Foundation 2.0 y, de forma complementaria, bajo Apache License 1.1. Los contribuyentes pueden elegir la licencia que prefieran para su aporte. Consulta los archivos LICENSE-APACHE-2.0.txt y LICENSE-APACHE-1.1.txt para los textos y condiciones completos.
+
+## Declaración de autoría y huella digital
+El titular declara reconocimiento de Huella Digital y Derechos de Autor retroactivo al 30 de abril de 2004. Esta condición otorga al titular la libertad para publicar partes del proyecto como código abierto bajo las licencias indicadas y, a su vez, conservar derechos para monetizar, gestionar y robustecer sus sistemas. Al contribuir, se solicita incluir Nombre y versión del desarrollador (ej.: "Alfredo Martínez Pastén ID Digital y fiscal Globs v7.0").
 
 ## Fe de erratas y sugerencias
-He añadido una lista de sugerencias y correcciones en CONTRIBUTIONS.md (sección "Sugerencias / Fe de erratas"). Entre las recomendaciones principales están:
-- Normalizar el nombre de archivos: usar CONTRIBUTIONS.md o CONTRIBUTORS.md (no nombres mezclados).
-- Corregir errores tipográficos: "Hadwer" → "Hardware", "Softwer" → "Software".
-- Eliminar bloques duplicados y consolidar la información de contacto en un solo lugar.
-- Añadir un archivo LICENSE con el texto de la(s) licencia(s) elegida(s).
-- Añadir un archivo CONTRIBUTORS.md con la lista de colaboradores y el formato requerido (nombre + versión).
+Se han detectado y sugerido correcciones y mejoras en la documentación y estructura del repositorio (normalización de nombres de archivos, corrección de tipografías: "Hadwer" → "Hardware", "Softwer" → "Software", consolidación de bloques duplicados, creación de archivos LICENSE, CONTRIBUTORS.md/CONTRIBUTORS.md y CONTRIBUTIONS.md, etc.). Para detalles completos sobre reglas de contribución y estructura consulta CONTRIBUTIONS.md.
 
-> Nota: He preservado los enlaces originales y la mayor parte del contenido informativo; las correcciones y la limpieza se detallan en CONTRIBUTIONS.md.
+## Contacto
+Alfredo Martínez Pastén (MAPA830324UM9) — @alfreddlove83
+
