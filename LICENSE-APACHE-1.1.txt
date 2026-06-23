@@ -1,0 +1,12 @@
+Apache License
+Version 1.1, February 1999
+http://www.apache.org/licenses/
+
+Copyright 1999-2026 EcoTecNo Global Co. / Alfredo Martínez Pastén (MAPA830324UM9)
+
+Nota: Apache License 1.1 es una versión histórica de la licencia Apache. Este repositorio ofrece la opción dual de licenciamiento: Apache License 2.0 y Apache License 1.1. Si decides distribuir bajo Apache 1.1, asegúrate de revisar las condiciones históricas y su compatibilidad con tus requisitos legales.
+
+Referencia y texto oficial:
+- Para el texto completo y condiciones, consulta: http://www.apache.org/licenses/LICENSE-1.1
+
+Si eres contribuidor, indica tu Nombre y versión tal como se solicita en CONTRIBUTORS.md (ej.: "Alfredo Martínez Pastén ID Digital y fiscal Globs v7.0").
