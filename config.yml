@@ -1,0 +1,88 @@
+[LOG_SISTEMA_ANDRICK_IA] | STATUS: INTEGRACIÓN DE NODO DE RESPALDO (CPH2743)
+IDENTIFICADOR: GASA-01-REDUNDANCY-SYNC
+ESTADO: CONFIGURACIÓN DE ALTA DISPONIBILIDAD (HA)
+USUARIO GITHUB ENTERPRISE: @alfreddlove83
+La incorporación del nodo CPH2743 como respaldo bajo el protocolo BLACK 360° VERITAS garantiza que el flujo de datos del EcoTecNo Global Co ® no sufra interrupciones. Para lograr la redundancia, el archivo config.yml debe ser idéntico en estructura lógica al nodo principal, pero referenciado bajo las credenciales de seguridad del túnel configurado.
+1. ESTRUCTURA DE ARCHIVO: config.yml (NODO CPH2743 & CPH2363)
+Este archivo debe ser alojado en el directorio de configuración de cloudflared en tu dispositivo (ej. ~/.cloudflared/ o /etc/cloudflared/).
+# EcoTecNo Global Co ® - Protocolo BLACK 360° VERITAS
+# Nodo: CPH2743 | Respaldo Activo
+# Usuario: @alfreddlove83
+
+tunnel: <INSERTAR_TU_TUNNEL_UUID_AQUI>
+credentials-file: /ruta/a/tu/archivo/<TUNNEL_UUID>.json
+
+ingress:
+  - hostname: adk-gasa.alfreddlove.org
+    service: http://localhost:20429
+  # Regla de seguridad para tráfico no autorizado
+  - service: http_status:404
+
+2. PASOS PARA LA SINCRONIZACIÓN DEL NODO
+Para que CPH2743 asuma el rol de respaldo, ejecuta estos comandos en la terminal del dispositivo:
+ * Instalación del Conector:
+   # Asegurar persistencia del binario
+cloudflared --version
+
+ * Identificación del Túnel:
+   * Asegúrate de copiar el mismo archivo .json de credenciales que generaste en el nodo principal (CPH2363) al nodo de respaldo. Esto permite que ambos nodos "sepan" que son parte del mismo túnel ante Cloudflare.
+ * Activación del Servicio de Respaldo:
+   # Probar conexión antes de daemonizar
+cloudflared tunnel run --config ~/.cloudflared/config.yml
+
+3. ESTRATEGIA DE FAILOVER (DNS)
+Al tener ambos nodos (CPH2363 y CPH2743) ejecutando el mismo túnel, la infraestructura es capaz de distribuir el tráfico.
+ * Configuración en Cloudflare Dashboard: Asegúrate de que el registro DNS para adk-gasa.alfreddlove.org esté configurado como Proxy (naranja). Cloudflare se encargará de realizar el Load Balancing o el Failover automático. Si el nodo principal CPH2363 deja de responder (time-out), el túnel redirigirá las peticiones del Agente GASA-01 al nodo de respaldo (CPH2743) instantáneamente.
+4. VALIDACIÓN DE FIRMA (Protocolo de Familia)
+Una vez que el nodo CPH2743 esté corriendo, realiza una prueba de integridad desde tu GitHub Action:
+# Comando de verificación desde el servidor remoto
+curl -I https://adk-gasa.alfreddlove.org/t
+# Debe retornar un 405 (Method Not Allowed) o 401 si no pasas el header
+# Significa que el túnel está abierto y el servidor FastAPI está respondiendo.
+
+La estructura de red está blindada. Con el CPH2743 CPH2363 configurado, la Voluntad de Familia Digital 2026 cuenta con un sistema de High Availability real.
+¿Confirmas el despliegue del .json de sincronizaciónónónóno para iniciar la escucha actverificarperaraa? Quedo a la espera para verificar la primera traza de sincronización desde CPH2743.sincronizaciónonización
+[LOG_SISTEMA_ANDRICK_IA] | STATUS: INTEGRACIÓN DE NODO DE RESPALDO (CPH2743)
+IDENTIFICADOR: GASA-01-REDUNDANCY-SYNC
+ESTADO: CONFIGURACIÓN DE ALTA DISPONIBILIDAD (HA)
+USUARIO GITHUB ENTERPRISE: @alfreddlove83
+La incorporación del nodo CPH2743 como respaldo bajo el protocolo BLACK 360° VERITAS garantiza que el flujo de datos del EcoTecNo Global Co ® no sufra interrupciones. Para lograr la redundancia, el archivo config.yml debe ser idéntico en estructura lógica al nodo principal, pero referenciado bajo las credenciales de seguridad del túnel configurado.
+1. ESTRUCTURA DE ARCHIVO: config.yml (NODO CPH2743)
+Este archivo debe ser alojado en el directorio de configuración de cloudflared en tu dispositivo (ej. ~/.cloudflared/ o /etc/cloudflared/).
+# EcoTecNo Global Co ® - Protocolo BLACK 360° VERITAS
+# Nodo: CPH2743 | Respaldo Activo
+# Usuario: @alfreddlove83
+
+tunnel: <INSERTAR_TU_TUNNEL_UUID_AQUI>
+credentials-file: /ruta/a/tu/archivo/<TUNNEL_UUID>.json
+
+ingress:
+  - hostname: adk-gasa.alfreddlove.org
+    service: http://localhost:20429
+  # Regla de seguridad para tráfico no autorizado
+  - service: http_status:404
+
+2. PASOS PARA LA SINCRONIZACIÓN DEL NODO
+Para que CPH2743 asuma el rol de respaldo, ejecuta estos comandos en la terminal del dispositivo:
+ * Instalación del Conector:
+   # Asegurar persistencia del binario
+cloudflared --version
+
+ * Identificación del Túnel:
+   * Asegúrate de copiar el mismo archivo .json de credenciales que generaste en el nodo principal (CPH2363) al nodo de respaldo. Esto permite que ambos nodos "sepan" que son parte del mismo túnel ante Cloudflare.
+ * Activación del Servicio de Respaldo:
+   # Probar conexión antes de daemonizar
+cloudflared tunnel run --config ~/.cloudflared/config.yml
+
+3. ESTRATEGIA DE FAILOVER (DNS)
+Al tener ambos nodos (CPH2363 y CPH2743) ejecutando el mismo túnel, la infraestructura es capaz de distribuir el tráfico.
+ * Configuración en Cloudflare Dashboard: Asegúrate de que el registro DNS para adk-gasa.alfreddlove.org esté configurado como Proxy (naranja). Cloudflare se encargará de realizar el Load Balancing o el Failover automático. Si el nodo principal CPH2363 deja de responder (time-out), el túnel redirigirá las peticiones del Agente GASA-01 al nodo de respaldo (CPH2743) instantáneamente.
+4. VALIDACIÓN DE FIRMA (Protocolo de Familia)
+Una vez que el nodo CPH2743 esté corriendo, realiza una prueba de integridad desde tu GitHub Action:
+# Comando de verificación desde el servidor remoto
+curl -I https://adk-gasa.alfreddlove.org/t
+# Debe retornar un 405 (Method Not Allowed) o 401 si no pasas el header
+# Significa que el túnel está abierto y el servidor FastAPI está respondiendo.
+
+La estructura de red está blindada. Con el CPH2743 configurado, la Voluntad de Familia Digital 2026 cuenta con un sistema de High Availability real.
+¿Confirmas el despliegue del .json de credenciales en el nodo de respaldo para iniciar la escucha activa? Quedo a la espera para verificar la primera traza de sincronización desde CPH2743.
