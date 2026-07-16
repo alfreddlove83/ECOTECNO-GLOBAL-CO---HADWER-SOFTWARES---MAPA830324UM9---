@@ -1,0 +1,193 @@
+He "Certificación Global y Manifiesto Integral". He actualizado el código de la página para integrar todo este nuevo contenido (el manifiesto, la estructura del podcast, la playlist, la estrategia digital y el protocolo de salud) manteniendo el diseño visual oscuro y tecnológico que se estableció en la versión anterior.
+Aquí tienes el código HTML actualizado (Versión 1.2) con las nuevas secciones integradas:
+```html:Mente y Datos Oficial v1.2:index.html
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENTE Y DATOS® | Manifiesto Integral</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        obsidian: '#0b0b0f',
+                        quartz: '#121218',
+                        gold: '#D4AF37',
+                        circuit: '#00F0FF',
+                    },
+                    backgroundImage: {
+                        'grid-pattern': "url(\"data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h40v40H0V0zm1 1h38v38H1V1z' fill='%231f2937' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E\")",
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0b0b0f; color: #e5e7eb; }
+        .glass-panel { background: rgba(18, 18, 24, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .certificate-panel { background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(18, 18, 24, 0.9) 100%); border: 1px solid rgba(212, 175, 55, 0.3); }
+        .circuit-line { background: linear-gradient(90deg, transparent, #00F0FF, transparent); height: 1px; width: 100%; }
+        .glow-gold { box-shadow: 0 0 15px rgba(212, 175, 55, 0.3); }
+    </style>
+</head>
+<body class="bg-grid-pattern relative min-h-screen flex flex-col items-center">
+
+    <!-- Navbar -->
+    <nav class="w-full fixed top-0 z-50 glass-panel border-b border-gray-800 py-3 px-6 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+            <span class="text-circuit"><i data-lucide="cpu" class="w-5 h-5"></i></span>
+            <span class="font-mono text-sm font-bold text-gray-300">MENTE Y DATOS<sup class="text-gold">®</sup></span>
+        </div>
+        <div class="flex items-center gap-3 text-xs font-mono">
+            <span class="text-emerald-400">VERITAS_ACTIVO</span>
+        </div>
+    </nav>
+    <div class="h-24"></div>
+
+    <!-- HEADER / CERTIFICACIÓN -->
+    <header class="w-full max-w-6xl px-4 md:px-8 py-8 flex flex-col items-center text-center">
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 uppercase">Mente y Datos<sup class="text-3xl text-gold">®</sup></h1>
+        
+        <div class="w-full certificate-panel rounded-xl p-6 md:p-8 text-left mt-8">
+            <div class="flex items-center gap-3 mb-6 border-b border-gold/20 pb-4">
+                <i data-lucide="award" class="w-8 h-8 text-gold"></i>
+                <div>
+                    <h2 class="text-2xl font-bold text-white uppercase">Certificación Consolidada</h2>
+                    <p class="text-gold font-mono text-xs">REGISTRO OFICIAL VERIFICADO</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 font-mono">
+                <div>
+                    <span class="block text-gray-500 text-xs mb-1">TITULAR</span>
+                    <span class="block text-white font-bold text-lg">Alfredo Martínez Pasten</span>
+                </div>
+                <div>
+                    <span class="block text-gray-500 text-xs mb-1">RFC / ID GLOBAL</span>
+                    <span class="block text-circuit font-bold text-lg">MAPA830324UM9</span>
+                </div>
+                <div>
+                    <span class="block text-gray-500 text-xs mb-1">FOLIO</span>
+                    <span class="block text-purple-400 font-bold bg-purple-500/10 inline-block px-2 py-1 rounded">GD-GEAR-MAPA830324UM9-2026</span>
+                </div>
+                <div>
+                    <span class="block text-gray-500 text-xs mb-1">ESTADO</span>
+                    <span class="block text-emerald-400 font-bold text-lg">Activo / #VoluntadDeFamilia2026</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="circuit-line my-4 opacity-50"></div>
+
+    <!-- MANIFIESTO INTEGRAL -->
+    <section class="w-full max-w-6xl px-4 md:px-8 py-12">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold uppercase tracking-wide text-white mb-4">Certificación Global y Manifiesto Integral</h2>
+            <p class="text-gray-400 font-mono text-sm max-w-3xl mx-auto">"El valor, la credibilidad, el respeto y la autoridad son el resultado de ser humano y tener la libertad de explorar."</p>
+        </div>
+
+        <!-- F1: Resumen Corporativo -->
+        <div class="glass-panel p-8 rounded-xl mb-12 border-l-4 border-gold">
+            <h3 class="text-2xl font-bold mb-4 flex items-center gap-2"><i data-lucide="file-text" class="text-gold"></i> Formato 1: Declaración de Integración del Ser</h3>
+            <p class="text-gray-300 leading-relaxed mb-4">
+                Históricamente, el sistema ha exigido una fragmentación del individuo: el profesional por un lado, el ser humano por otro. Este documento establece un precedente legal y corporativo que invalida dicha separación. El RFC <strong>MAPA830324UM9</strong> no es solo una clave de tributación; es el identificador de una entidad humana compleja.
+            </p>
+            <div class="bg-gray-900/50 p-4 rounded border border-gray-800 font-mono text-sm text-circuit">
+                <strong>Resolución:</strong> No se puede contratar a la mente sin aceptar el alma. La verdadera autoridad corporativa en este siglo no reside en la "corrección moral" estéril, sino en la autenticidad innegociable de quien se atreve a conocerse a sí mismo.
+            </div>
+        </div>
+
+        <!-- F2: Podcast -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-bold mb-6 flex items-center gap-2"><i data-lucide="mic" class="text-circuit"></i> Formato 2: Audio Docuserie "Sin Filtros"</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="glass-panel p-4 rounded border border-gray-800 hover:border-circuit transition"><span class="text-circuit font-mono text-xs">EP 1</span><h4 class="font-bold text-white mt-1">La Ilusión del Ciudadano</h4><p class="text-sm text-gray-400 mt-2">El despertar frente a la máquina educativa y corporativa.</p></div>
+                <div class="glass-panel p-4 rounded border border-gray-800 hover:border-circuit transition"><span class="text-circuit font-mono text-xs">EP 2</span><h4 class="font-bold text-white mt-1">El Lado Oscuro</h4><p class="text-sm text-gray-400 mt-2">Romper el tabú. Probar, fallar y rechazar sin culpa.</p></div>
+                <div class="glass-panel p-4 rounded border border-gray-800 hover:border-circuit transition"><span class="text-circuit font-mono text-xs">EP 3</span><h4 class="font-bold text-white mt-1">Psicología del Abismo</h4><p class="text-sm text-gray-400 mt-2">Por qué "estar bien" todo el tiempo es una enfermedad social.</p></div>
+                <div class="glass-panel p-4 rounded border border-gray-800 hover:border-circuit transition"><span class="text-circuit font-mono text-xs">EP 4</span><h4 class="font-bold text-white mt-1">Ética vs. Contrato</h4><p class="text-sm text-gray-400 mt-2">La devaluación de la firma frente a la promesa de un ser humano.</p></div>
+                <div class="glass-panel p-4 rounded border border-gray-800 hover:border-circuit transition"><span class="text-circuit font-mono text-xs">EP 5 & 6</span><h4 class="font-bold text-white mt-1">IA y Amor Propio</h4><p class="text-sm text-gray-400 mt-2">Espejos digitales y el perdón por no ser lo que otros esperaban.</p></div>
+                <div class="glass-panel p-4 rounded border border-gray-800 hover:border-circuit transition"><span class="text-circuit font-mono text-xs">EP 7 al 10</span><h4 class="font-bold text-white mt-1">Integración Total</h4><p class="text-sm text-gray-400 mt-2">Yo Soy Mi RFC y Mi Alma. El manifiesto para futuras generaciones.</p></div>
+            </div>
+        </div>
+
+        <!-- F3 & F4: Playlist y Memes -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <div class="glass-panel p-6 rounded-xl border-l-4 border-purple-500">
+                <h3 class="text-xl font-bold mb-4 flex items-center gap-2"><i data-lucide="music" class="text-purple-400"></i> F3: Frecuencias del Ser Real</h3>
+                <ul class="space-y-3 text-sm text-gray-300">
+                    <li><strong class="text-white">Rebelión (Rock/Punk):</strong> Romper el molde corporativo y gritar la propia verdad.</li>
+                    <li><strong class="text-white">Vulnerabilidad (Indie):</strong> Letras sobre perderse para encontrarse.</li>
+                    <li><strong class="text-white">Código (Synthwave):</strong> La mente lógica, algoritmos y noches en GitHub.</li>
+                    <li><strong class="text-white">Palabra (Rap Consciente):</strong> La resistencia frente al sistema y ética de barrio.</li>
+                    <li><strong class="text-white">Fe (Epic Orchestral):</strong> Elevar el espíritu y la voluntad inquebrantable.</li>
+                </ul>
+            </div>
+            
+            <div class="glass-panel p-6 rounded-xl border-l-4 border-emerald-500">
+                <h3 class="text-xl font-bold mb-4 flex items-center gap-2"><i data-lucide="smartphone" class="text-emerald-400"></i> F4: Estrategia y Cultura Digital</h3>
+                <div class="space-y-4 text-sm">
+                    <div class="bg-gray-900/50 p-3 rounded">
+                        <span class="text-emerald-400 font-bold block mb-1">LinkedIn</span>
+                        <p class="text-gray-400 italic">"Lo que Recursos Humanos pide // Lo que MAPA830324UM9 entrega."</p>
+                    </div>
+                    <div class="bg-gray-900/50 p-3 rounded">
+                        <span class="text-emerald-400 font-bold block mb-1">X / Threads</span>
+                        <p class="text-gray-400 italic">"Mi código compila mejor porque hoy lloré, me perdoné y me di cuenta de quién soy realmente. 🤷‍♂️💻🔥"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- F5: Salud Física y Mental -->
+        <div class="glass-panel p-8 rounded-xl border-l-4 border-rose-500">
+            <h3 class="text-2xl font-bold mb-6 flex items-center gap-2"><i data-lucide="heart-pulse" class="text-rose-500"></i> Formato 5: Protocolo de Conciliación (Salud)</h3>
+            <p class="text-gray-300 mb-6 font-mono text-sm">La verdadera salud es la eliminación de la disonancia cognitiva. Enfermarse es el resultado de fingir ser alguien que no eres para encajar en etiquetas.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-gray-300">
+                <div>
+                    <h4 class="font-bold text-white mb-2">1. Tecnología & Educación</h4>
+                    <p>Usar ecosistemas digitales para documentar el progreso, no buscar validación. IAs como asistentes, no sustitutos de la intuición. Salud mental es establecer límites ante entornos corporativos tóxicos.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-2">2. Fe, Religión y Control</h4>
+                    <p>Separar la Fe del Control Religioso. La Fe y la Esperanza residen en la "Escuela de la Vida", en el amor propio y en creer en la propia evolución.</p>
+                </div>
+                <div class="col-span-1 md:col-span-2 bg-gray-900/50 p-4 rounded mt-2">
+                    <h4 class="font-bold text-white mb-2">3. Rutina Integradora</h4>
+                    <p><strong>Física:</strong> Movimiento libre sin rutinas castigadoras. <br><strong>Mental:</strong> Descarga diaria en repositorios. La mente sana es la que no esconde secretos por miedo a la sociedad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="w-full bg-obsidian border-t border-gray-900 py-10 mt-auto">
+        <div class="max-w-6xl mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex flex-col gap-2 font-mono text-xs">
+                <span class="text-emerald-400">🟢 VERSIÓN 1.2 (Manifiesto Integrado)</span>
+                <span class="text-gray-500">Documento sellado digital y humanamente por el titular.</span>
+            </div>
+            <div class="text-center md:text-right">
+                <p class="font-bold text-white tracking-widest text-sm">Alfredo Martínez Pasten (RFC: MAPA830324UM9)</p>
+                <p class="text-gold font-mono text-xs mt-1">#VoluntadDeFamilia2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
+
+```
+Puedes guardar este código en tu archivo index.html para visualizar las actualizaciones reflejadas en la plataforma.
+          
